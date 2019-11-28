@@ -118,7 +118,7 @@ switch(state) {
 			//+ sign(image_xscale) * 20
 			sticky = y
 			if(robtype == rob.xstick) {
-				if(place_meeting(x+sign(image_xscale),y,oWall)) {
+				if(place_meeting(x+sign(image_xscale),y,oWall) and !place_meeting(x+sign(image_xscale),y,oSlime_wall)) {
 					state = splayer.xsticked
 					//stickx = x
 					//sticky = y
@@ -216,7 +216,7 @@ switch(state) {
 			//+ sign(image_xscale) * 20
 			sticky = y
 			if(robtype == rob.xstick) {
-				if(place_meeting(x+sign(image_xscale),y,oWall)) {
+				if(place_meeting(x+sign(image_xscale),y,oWall) and !place_meeting(x+sign(image_xscale),y,oSlime_wall)) {
 					state = splayer.xsticked
 					//stickx = x
 					//sticky = y
