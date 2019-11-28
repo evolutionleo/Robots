@@ -1,10 +1,10 @@
 1.0.0←ed6a955d-5826-4f98-a450-10b414266c27←ed6a955d-5826-4f98-a450-10b414266c27|{
     "option_window_colour": {
-        "Value": 4294927717
+        "Value": 4294967295
     },
     "option_gameguid": "c564fbde-6e27-4303-91e6-c63448530fc6",
     "option_game_speed": 60,
-    "option_lastchanged": "28 November 2019 16:40:40",
+    "option_lastchanged": "28 November 2019 19:33:32",
     "option_sci_usesci": true,
     "option_spine_licence": true
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
