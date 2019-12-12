@@ -22,7 +22,7 @@ if(state == splayer.ysticked) {
 draw_self()
 #endregion
 #region Draw triangle
-if(instance_find(oHbot,oSwitch.current) == self)
+if(!instance_exists(oSwitch) or instance_find(oHbot,oSwitch.current) == self)
 draw_sprite(sArrow,0,x-10,y - 100)
 #endregion
 #region Draw error message

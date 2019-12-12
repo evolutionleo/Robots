@@ -1,5 +1,7 @@
 /// @description 
-if(sprite_index == sDoor_opened) {
-	image_speed = 0
-	image_index = image_number - 1
+if(sprite_index == sDoor_opening) {
+	sprite_index = sDoor_opened
+}
+if(sprite_index == sDoor_closing) {
+	sprite_index = sDoor_closed
 }

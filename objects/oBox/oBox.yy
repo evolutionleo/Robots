@@ -5,16 +5,6 @@
     "name": "oBox",
     "eventList": [
         {
-            "id": "2ddb1a9a-f111-4ba9-9971-279948e58889",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "799d2e51-c0ad-4c98-b32c-24b1a0245ba8"
-        },
-        {
             "id": "79508a60-f012-4940-ae0b-b3a42ca4a798",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -36,7 +26,16 @@
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
+    "overriddenProperties": [
+        {
+            "id": "0c3b204c-326a-41c8-a5e8-7c1cd53f6be4",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "d20e4585-801e-4c46-b956-9e165d90e652",
+            "propertyId": "7db4357c-76b4-48ef-b205-b4440e791119",
+            "value": "True"
+        }
+    ],
     "parentObjectId": "d20e4585-801e-4c46-b956-9e165d90e652",
     "persistent": false,
     "physicsAngularDamping": 0.1,

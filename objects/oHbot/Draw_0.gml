@@ -33,7 +33,7 @@ else {
 //shader_reset()
 #endregion
 #region Draw triangle
-if(instance_find(oHbot,oSwitch.current) == self)
+if(!instance_exists(oSwitch) or instance_find(oHbot,oSwitch.current) == self)
 	draw_sprite(sArrow,0,x,y - 80)
 #endregion
 #region Error message

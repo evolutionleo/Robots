@@ -8,6 +8,7 @@ enum splayer {
 	back_transformating,
 	//lift,
 	sleep,
+	flying
 	//terminal,
 	//gravity_cancel
 }	

@@ -1,9 +1,15 @@
 /// @description 
-if(room != room_last) {
-msecs =	int64(get_timer() / 1000	% 1000)
-secs =	int64(get_timer() / 1000000	% 60)
-mins =	int64(get_timer() / 1000000	/ 60	% 60)
-hours = int64(get_timer() / 1000000	/ 3600	% 1000)
+if(room != rlast) {
+
+if(!variable_instance_exists(id,"timer_reset"))
+	timer_reset = 0
+
+time = get_timer() - timer_reset
+
+msecs =	int64(time / 1000		% 1000)
+secs =	int64(time / 1000000	% 60)
+mins =	int64(time / 1000000	/ 60	% 60)
+hours = int64(time / 1000000	/ 3600	% 1000)
 
 if(msecs < 100)
 	msecs = "0" + string(msecs)

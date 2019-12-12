@@ -1,12 +1,14 @@
 /// @description 
 #region Input
-if(instance_find(oHbot,oSwitch.current) == self) {
+if(!instance_exists(oSwitch) or instance_find(oHbot,oSwitch.current) == self) {
 kjump = keyboard_check_pressed(vk_space)
 kup = keyboard_check(ord("W"))
 kleft = keyboard_check(ord("A"))
 kdown = keyboard_check(ord("S"))
 kright = keyboard_check(ord("D"))
 kabil = keyboard_check_pressed(ord("E")) //Ability key
+kinter = keyboard_check_pressed(ord("F")) //Interact key
+
 //kbox = keyboard_check_released(ord("Q")) //Interact with a box
 //kterm = keyboard_check_pressed(ord("R"))
 }
@@ -17,6 +19,7 @@ kleft = false
 kdown = false
 kright = false
 kabil = false
+kinter = false
 //kbox = false
 //kterm = false
 }
@@ -25,12 +28,25 @@ kabil = false
 move = kright - kleft
 
 
-if(abs(add_hsp) > 1)
-	add_hsp *= 0.9
-else
+if(place_meeting(x,y+1,oWall)) {
+	multiplier = 0.95
+	sp = walksp
+}
+else {
+	multiplier = 0.95
+	sp = flysp
+}
+
+
+if(abs(add_hsp) > 1) {
+	add_hsp *= multiplier
+}
+else {
 	add_hsp = 0
+}
 
 hsp = add_hsp
+
 
 if(abs(vsp) > max_vsp)
 	vsp *= 0.9
@@ -90,7 +106,7 @@ switch(state) {
 		}
 		
 		if(sign(image_xscale) == move) {
-			base_hsp = move * walksp
+			base_hsp = move * sp
 		}
 		else if(move == 0) {
 			base_hsp = 0
@@ -196,7 +212,7 @@ switch(state) {
 	case splayer.stand: #region Stand state
 		if(object_index != oVbot) {
 			if(sign(image_xscale) == move) {
-				base_hsp = move * walksp
+				base_hsp = move * sp
 			}
 			else if(move == 0) {
 				base_hsp = 0
@@ -255,6 +271,7 @@ switch(state) {
 		vsp += grv
 		if(kdown)
 			vsp += dspeed
+			
 		break
 	#endregion
 	case splayer.sleep: #region Sleep state... Do nothing!

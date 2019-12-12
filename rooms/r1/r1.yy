@@ -7,7 +7,6 @@
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-        "0493af55-50cf-453a-bcbb-c740600628b3",
         "851f414d-8db8-4be0-9951-de9dbd73f232",
         "a674d824-c485-4bc2-94b8-75dadd0803f7",
         "8a752740-1beb-48e6-9f46-44757edc2e9c",
@@ -16,7 +15,8 @@
         "66092825-8a8e-4a65-af68-5c0c48594691",
         "a5f4e1a9-5400-4502-a1a8-e2d762d3dfc4",
         "5b250040-f89f-47f7-b5c7-817cc24e7ee1",
-        "601034f0-d644-4de2-882e-4752bbf286ad"
+        "601034f0-d644-4de2-882e-4752bbf286ad",
+        "0493af55-50cf-453a-bcbb-c740600628b3"
     ],
     "IsDnD": false,
     "layers": [
@@ -211,14 +211,14 @@
             "id": "1e7aa60e-1e66-4426-a387-08109b50619e",
             "animationFPS": 15,
             "animationSpeedType": "0",
-            "colour": { "Value": 4291611852 },
+            "colour": { "Value": 4294967295 },
             "depth": 600,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
             "hierarchyVisible": true,
             "hspeed": 0,
-            "htiled": false,
+            "htiled": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -230,13 +230,13 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
-            "spriteId": "00000000-0000-0000-0000-000000000000",
-            "stretch": false,
+            "spriteId": "54bf091a-e79f-4c3c-8735-a5cc0b6b3349",
+            "stretch": true,
             "userdefined_animFPS": false,
             "userdefined_depth": false,
             "visible": true,
             "vspeed": 0,
-            "vtiled": false,
+            "vtiled": true,
             "x": 0,
             "y": 0
         }

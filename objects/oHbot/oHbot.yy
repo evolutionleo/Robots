@@ -113,6 +113,16 @@
             "enumb": 1,
             "eventtype": 2,
             "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
+        },
+        {
+            "id": "bf95859a-9489-4d51-b756-fba3e5972358",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 120,
+            "eventtype": 9,
+            "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -163,6 +173,20 @@
     ],
     "physicsStartAwake": true,
     "properties": [
+        {
+            "id": "eaab91a4-69f5-42b3-be92-1136ac9ad3fb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "9",
+            "varName": "flysp",
+            "varType": 0
+        },
         {
             "id": "5fce73ec-fc2f-4039-9014-31440d9e5ebd",
             "modelName": "GMObjectProperty",

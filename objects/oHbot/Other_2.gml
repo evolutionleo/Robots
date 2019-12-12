@@ -1,2 +1,3 @@
 /// @description 
-//room_goto(r8)
+//room_goto(r16)
+global.run_invalid = false

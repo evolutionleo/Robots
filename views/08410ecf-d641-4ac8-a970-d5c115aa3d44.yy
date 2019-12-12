@@ -9,7 +9,13 @@
         "f384ad25-16a8-4754-b0f1-d7cf1a90a5d5",
         "9b5c4ee3-2eac-43b9-b265-dad545076162",
         "002a751d-7048-486f-983e-b6e485f031cb",
-        "e50da21d-5111-42d6-9e63-213151d0ec9d"
+        "e50da21d-5111-42d6-9e63-213151d0ec9d",
+        "54bf091a-e79f-4c3c-8735-a5cc0b6b3349",
+        "e58ff957-29a5-480e-8333-ceb875e5d6d7",
+        "6c713ae4-168a-47eb-a2c0-763d7c79419c",
+        "e0f0c03a-93ab-4d30-81e8-d8062db23ef5",
+        "c8eb985d-ed41-4a9a-b5cf-3ff3f08a50e4",
+        "8680b65f-b8dd-4917-a9ff-bd9f3004c585"
     ],
     "filterType": "GMSprite",
     "folderName": "decoration",

@@ -23,7 +23,8 @@
         "b3a82cdf-36ac-48c5-b9c7-acb0b73a9a8a",
         "1bf1f042-656d-40b0-b87a-454a0d1bfbe3",
         "cf9d4be6-9f1d-4fe0-b57f-f2e3a95c0bbd",
-        "068684f6-a76b-44ad-bf59-d879a98ea663"
+        "068684f6-a76b-44ad-bf59-d879a98ea663",
+        "5ba3d622-118d-4704-be76-fbbeed7fac63"
     ],
     "IsDnD": false,
     "layers": [
@@ -86,8 +87,8 @@
             "name": "Back",
             "id": "ea63448c-7232-40ce-901a-e9a8d0a67e5d",
             "depth": 200,
-            "grid_x": 64,
-            "grid_y": 64,
+            "grid_x": 32,
+            "grid_y": 32,
             "hierarchyFrozen": false,
             "hierarchyVisible": true,
             "inheritLayerDepth": false,
@@ -95,7 +96,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-
+{"name": "inst_7A3E3197","id": "5ba3d622-118d-4704-be76-fbbeed7fac63","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_7A3E3197","objId": "da184d1d-36b9-423d-bd87-ce4e176dcfb0","properties": null,"rotation": 0,"scaleX": 3.5,"scaleY": 3.5,"mvc": "1.1","x": 205,"y": 480}
             ],
             "layers": [
 
@@ -199,14 +200,14 @@
             "id": "90476fb8-cd47-42f3-a2d1-d21d7d986e0a",
             "animationFPS": 15,
             "animationSpeedType": "0",
-            "colour": { "Value": 4291611852 },
+            "colour": { "Value": 4294967295 },
             "depth": 500,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
             "hierarchyVisible": true,
             "hspeed": 0,
-            "htiled": false,
+            "htiled": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -218,13 +219,13 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
-            "spriteId": "00000000-0000-0000-0000-000000000000",
-            "stretch": false,
+            "spriteId": "54bf091a-e79f-4c3c-8735-a5cc0b6b3349",
+            "stretch": true,
             "userdefined_animFPS": false,
             "userdefined_depth": false,
             "visible": true,
             "vspeed": 0,
-            "vtiled": false,
+            "vtiled": true,
             "x": 0,
             "y": 0
         }

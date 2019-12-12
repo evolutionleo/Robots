@@ -44,17 +44,28 @@ y += vsp
 #region X collision
 //var colx = collx(hsp,obj)
 pushx()
+
 var colx = place_meeting(x+hsp,y,obj)
 if(colx)
 {
-	while(!place_meeting(x+sign(hsp),y,obj))
-	{
-		x += sign(hsp)
-		if(hsp == 0)
-			break
+	if(object_index == oHbot and !place_meeting(x+hsp,y-10,obj)) {
+		while(place_meeting(x+hsp,y,obj)) {
+			y--
+		}
 	}
-	hsp = 0
+	else {
+	while(!place_meeting(x+sign(hsp),y,obj))
+		{
+			x += sign(hsp)
+			if(hsp == 0)
+				break
+		}
+		hsp = 0
+	}
+	
+	
 }
+
 
 //else{
 x += hsp
