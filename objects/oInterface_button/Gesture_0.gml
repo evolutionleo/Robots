@@ -1,13 +1,16 @@
 /// @desc
-if(type == "level select" and active) {
-	room_goto(r1)
-	room_goto(level)
+
+if(active) {
+	
+	
+if(type == "level select") {
+	room_goto(level + 1)
 }
-else if(type == "level slide" and active) {
+else if(type == "level slide") {
 	with(oInterface_button) {
 		if(type == "level select") {
 			level += other.slide_amount
-			if(level > room_last or level < 1) {
+			if(level > room_last - 1 or level < 1) {
 				visible = false
 				active = false
 			}
@@ -17,4 +20,18 @@ else if(type == "level slide" and active) {
 			}
 		}
 	}
+}
+else if(type == "exit") {
+	game_end()
+}
+else if(type == "select") {
+	room_goto(rLevel_select)
+}
+else if(type == "new game") {
+	room_goto(r1)
+}
+else if(type == "to menu") {
+	room_goto(rMain_menu)
+}
+
 }
