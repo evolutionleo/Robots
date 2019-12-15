@@ -7,7 +7,7 @@ if(type == "level slide") {
 				min_level = level
 		}
 	}
-	if(min_level + slide_amount > room_last) {
+	if(min_level + slide_amount > rlast) {
 		active = false
 	}
 	else {

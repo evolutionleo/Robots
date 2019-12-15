@@ -19,8 +19,14 @@ else if(type == "new game") {
 	draw_text(x,y,"New game")
 }
 else if(type == "options") {
-	draw_text(x,y,"Options (soon)")
+	draw_text(x,y,"Options")
 }
 else if(type == "editor") {
 	draw_text(x,y,"Editor (soon)")
+}
+else if(type == "leaderboard") {
+	draw_text(x,y,"Leaderboards")
+}
+else if(type == "bind") {
+	draw_text(x,y,key_to_string(bind_value))
 }

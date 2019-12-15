@@ -1,13 +1,22 @@
 /// @description 
 #region Input
 if(!instance_exists(oSwitch) or instance_find(oHbot,oSwitch.current) == self) {
-kjump = keyboard_check_pressed(vk_space)
-kup = keyboard_check(ord("W"))
-kleft = keyboard_check(ord("A"))
-kdown = keyboard_check(ord("S"))
-kright = keyboard_check(ord("D"))
-kabil = keyboard_check_pressed(ord("E")) //Ability key
-kinter = keyboard_check_pressed(ord("F")) //Interact key
+//kjump = keyboard_check_pressed(vk_space)
+//kup = keyboard_check(ord("W"))
+//kleft = keyboard_check(ord("A"))
+//kdown = keyboard_check(ord("S"))
+//kright = keyboard_check(ord("D"))
+//kabil = keyboard_check_pressed(ord("E"))		//Ability key
+//kinter = keyboard_check_pressed(ord("F"))		//Interact key
+
+
+kjump = keyboard_check_pressed(oInput.binds[? "jump"])
+kup = keyboard_check(oInput.binds[? "up"])
+kright = keyboard_check(oInput.binds[? "right"])
+kleft = keyboard_check(oInput.binds[? "left"])
+kdown = keyboard_check(oInput.binds[? "down"])
+kabil = keyboard_check_pressed(oInput.binds[? "abil"])		//Ability key
+kinter = keyboard_check_pressed(oInput.binds[? "inter"])	//Interact key
 
 //kbox = keyboard_check_released(ord("Q")) //Interact with a box
 //kterm = keyboard_check_pressed(ord("R"))

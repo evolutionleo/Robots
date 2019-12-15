@@ -10,7 +10,8 @@
         "7fd65804-b935-4cef-beb3-4ae129d5b6de",
         "20740831-68c9-4ba7-9e96-32144ed639e5",
         "92e477e3-f514-4435-ad9e-c149fa1cee72",
-        "35a51a0b-7eb9-4151-aa1c-6accb4645fba"
+        "35a51a0b-7eb9-4151-aa1c-6accb4645fba",
+        "f8341ff3-5d59-4fb7-9f82-c5692cb1f796"
     ],
     "filterType": "GMObject",
     "folderName": "robots",
