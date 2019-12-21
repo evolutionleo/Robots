@@ -10,6 +10,7 @@ if(!instance_exists(oSwitch) or instance_find(oHbot,oSwitch.current) == self) {
 //kinter = keyboard_check_pressed(ord("F"))		//Interact key
 
 
+
 kjump = keyboard_check_pressed(oInput.binds[? "jump"])
 kup = keyboard_check(oInput.binds[? "up"])
 kright = keyboard_check(oInput.binds[? "right"])
