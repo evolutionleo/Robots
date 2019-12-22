@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "33a785a2-26ca-495b-b048-413bd9905ed2",
+            "Value": {
+                "id": "600d6aab-1050-4994-8141-a05744d524ad",
+                "resourcePath": "objects\\oEditor\\oEditor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "33ad891c-1629-48a7-869e-c9456c4c6578",
             "Value": {
                 "id": "a3c04bd0-911d-472c-86bf-19dddb646f0c",
