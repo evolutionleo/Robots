@@ -4,7 +4,7 @@
     },
     "option_gameguid": "c564fbde-6e27-4303-91e6-c63448530fc6",
     "option_game_speed": 60,
-    "option_lastchanged": "09 December 2019 15:28:09",
+    "option_lastchanged": "22 December 2019 18:52:09",
     "option_sci_usesci": false,
     "option_spine_licence": true
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{

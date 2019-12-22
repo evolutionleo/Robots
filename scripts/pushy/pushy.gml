@@ -7,7 +7,7 @@ if(place_meeting(x,y+vsp,oPushable)) { // and vsp < 0
 				
 			}
 			else {
-			vsp = other.vsp * push_value
+			vsp += other.vsp * push_value
 			//if(place_meeting(x,y+vsp,oPushable) and vsp != 0)
 			//	pushy()
 				
