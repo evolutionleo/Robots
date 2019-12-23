@@ -45,7 +45,7 @@ with(all) {
 	ds_map_add(my_map,"xs",image_xscale)
 	ds_map_add(my_map,"ys",image_yscale)
 	//ds_map_add(my_map,"l",layer_get_name(layer))
-	if(object_index == oWall) {
+	if(variable_instance_exists(id,"hsp")) {
 		ds_map_add(my_map,"hs",int64(hsp))
 		ds_map_add(my_map,"vs",int64(vsp))
 	}

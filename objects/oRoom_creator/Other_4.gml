@@ -25,7 +25,8 @@ list = map[? "ROOT"]
 //camera_set_view_size(view_camera[0],camera_wid,camera_hei)
 #endregion
 #region Create the instances
-for(var i = 0; i < ds_list_size(list); i++) {
+for(var i = 0; i < ds_list_size(list); i++)
+{
 	var cur_map = list[| i]
 	//StringToFile("Debug.txt",cur_map)
 	
@@ -37,15 +38,18 @@ for(var i = 0; i < ds_list_size(list); i++) {
 	var yy = cur_map[? "y"]			//y
 	var xs = cur_map[? "xs"]		//xscale
 	var ys = cur_map[? "ys"]		//yscale
-	if(speed_needed) {
+	if(speed_needed)
+	{
 		var hs = cur_map[? "hs"]	//hspeed
 		var vs = cur_map[? "vs"]	//vspeed
 	}
-	if(active_group_needed) {
+	if(active_group_needed)
+	{
 		var act = cur_map[? "a"]	//active
 		var _group = cur_map[? "g"]	//group
 	}
-	if(is_switch) {
+	if(is_switch)
+	{
 		//var curr = cur_map[? "cur"]
 		var _max = cur_map[? "ma"]
 	}
@@ -86,18 +90,22 @@ for(var i = 0; i < ds_list_size(list); i++) {
 	#region Create the instance
 	var inst = instance_create_layer(xx,yy,lay,obj)
 	//var inst = instance_create_depth(xx,yy,dep,obj)
-	with(inst) {
+	with(inst)
+	{
 		image_xscale = xs
 		image_yscale = ys
-		if(speed_needed) {
+		if(speed_needed)
+		{
 			hsp = hs
 			vsp = vs
 		}
-		if(active_group_needed) {
+		if(active_group_needed)
+		{
 			active = act
 			group = _group
 		}
-		if(is_switch) {
+		if(is_switch)
+		{
 			//current = curr
 			current = 0;
 			max_ = _max

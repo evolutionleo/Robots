@@ -36,3 +36,12 @@ else if(type == "bind") {
 else if(type == "delete") {
 	draw_text(x,y,"Delete ALL saves")
 }
+else if(type == "editor edit") {
+	draw_text(x,y,"Create/edit")
+}
+else if(type == "editor play") {
+	draw_text(x,y,"Play!")
+}
+else if(type == "clear all") {
+	draw_text(x,y,"Delete all")
+}

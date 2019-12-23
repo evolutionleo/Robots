@@ -65,6 +65,34 @@
             "value": "oWall",
             "varName": "type",
             "varType": 5
+        },
+        {
+            "id": "12b7eb67-a535-4bfc-94fd-11b62080be12",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"place\"",
+            "varName": "instrument",
+            "varType": 2
+        },
+        {
+            "id": "42c06e24-4154-4b6e-ab95-f3dc898c077d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 2,
+            "value": "sWall",
+            "varName": "spr",
+            "varType": 5
         }
     ],
     "solid": false,

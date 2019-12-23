@@ -32,37 +32,45 @@ var map = ds_map_create()
 //ds_list_mark_as_map(root_list,ds_list_size(root_list)-1)
 #endregion
 #region Stupid code
-with(oEditor_instrument) {
-	if(variable_instance_exists(id,"saveme") and saveme) {
+with(oEditor_object) {
+	//if(variable_instance_exists(id,"saveme") and saveme) {
 		
 	var my_map = ds_map_create()
 	ds_list_add(root_list,my_map)
 	ds_list_mark_as_map(root_list,ds_list_size(root_list)-1)
 	
 	ds_map_add(my_map,"o",(obj))
+	
+	//show_message("OBJECT "+string(id)+": "+string(obj))
+	
+	ds_map_add(my_map,"s",(spr))
 	ds_map_add(my_map,"x",int64(x))
 	ds_map_add(my_map,"y",int64(y))
 	ds_map_add(my_map,"xs",image_xscale)
 	ds_map_add(my_map,"ys",image_yscale)
 	//ds_map_add(my_map,"l",layer_get_name(layer))
-	if(obj == oWall) {
+	if(variable_instance_exists(id,"hsp"))
+	{
 		ds_map_add(my_map,"hs",int64(hsp))
 		ds_map_add(my_map,"vs",int64(vsp))
 	}
-	if(variable_instance_exists(id,"active")) {
+	if(variable_instance_exists(id,"active"))
+	{
 		ds_map_add(my_map,"a",(active))
 	}
-	if(variable_instance_exists(id,"group")) {
+	if(variable_instance_exists(id,"group"))
+	{
 		ds_map_add(my_map,"g",(group))
 	}
-	if(obj == oSwitch) {
+	if(obj == oSwitch)
+	{
 		//ds_map_add(my_map,"cu", current)
 		ds_map_add(my_map,"ma", (max_))
 	}
 	
 	
 	//ds_map_add_map(map,id,my_map)
-	}
+	//}
 }
 
 

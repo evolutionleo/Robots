@@ -6,3 +6,6 @@ if(type == "level select") {
 	if(level == r1)
 		active = true
 }
+else if(type == "editor play") {
+	active = file_exists("File.txt")
+}

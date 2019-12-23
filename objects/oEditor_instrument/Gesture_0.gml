@@ -1,2 +1,4 @@
 /// @desc
-oEditor.selected_instrument = type
+oEditor.instrument = instrument
+oEditor.arg = type
+oEditor.spr = spr

@@ -84,6 +84,19 @@ else if(type == "delete")
 	file_delete("README.ini")
 	game_restart()
 }
+else if(type == "editor") {
+	room_goto(rEditor_select)
+}
+else if(type == "editor edit") {
+	room_goto(rEditor)
+}
+else if(type == "editor play") {
+	room_goto(rEmpty)
+}
+else if(type == "clear all") {
+	with(oEditor_object)
+		instance_destroy()
+}
 
 }
 else if(type == "bind")
@@ -91,3 +104,4 @@ else if(type == "bind")
 	if(!any_bindkey_activated())
 		active = true
 }
+
