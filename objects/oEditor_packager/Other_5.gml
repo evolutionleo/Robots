@@ -34,7 +34,7 @@ var map = ds_map_create()
 #region Stupid code
 with(oEditor_object) {
 	//if(variable_instance_exists(id,"saveme") and saveme) {
-		
+	
 	var my_map = ds_map_create()
 	ds_list_add(root_list,my_map)
 	ds_list_mark_as_map(root_list,ds_list_size(root_list)-1)

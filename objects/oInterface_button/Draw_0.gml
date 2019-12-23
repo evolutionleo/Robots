@@ -25,7 +25,7 @@ else if(type == "options") {
 	draw_text(x,y,"Options")
 }
 else if(type == "editor") {
-	draw_text(x,y,"Editor (soon)")
+	draw_text(x,y,"Editor (beta)")
 }
 else if(type == "leaderboard") {
 	draw_text(x,y,"Leaderboards")

@@ -57,7 +57,7 @@ for(var i = 0; i < ds_list_size(list); i++)
 
 	#region Find layer
 	//var lay = cur_map[? "l"]		//layer
-	var lay = 0
+	var lay = "Instances"
 	var dep = 0
 	switch(obj) {
 		case oHbot:
@@ -111,6 +111,7 @@ for(var i = 0; i < ds_list_size(list); i++)
 			max_ = _max
 		}
 	}
+	oSwitch.max_ = instance_number(oHbot)
 	//key = ds_map_find_next(map,key)
 	#endregion
 //}

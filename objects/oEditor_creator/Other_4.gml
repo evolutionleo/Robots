@@ -1,6 +1,7 @@
 /// @desc
 #region The whole script
-if(file_exists("File.txt")) {
+if(file_exists("File.txt"))
+{
 #region Create needed layers
 layer_create(-400,"Player")
 layer_create(-300,"Instances")
@@ -25,11 +26,15 @@ list = map[? "ROOT"]
 //camera_set_view_size(view_camera[0],camera_wid,camera_hei)
 #endregion
 #region Create the instances
-for(var i = 0; i < ds_list_size(list); i++) {
+for(var i = 0; i < ds_list_size(list); i++)
+{
 	var cur_map = list[| i]
 	//StringToFile("Debug.txt",cur_map)
 	
 	var obj = cur_map[? "o"]		//object index
+	
+	show_debug_message("OBJECT "+string(id)+": "+string(obj))
+	
 	var spr = cur_map[? "s"]		//sprite index
 	//var speed_needed = obj == oWall
 	var speed_needed = false
@@ -39,15 +44,18 @@ for(var i = 0; i < ds_list_size(list); i++) {
 	var yy = cur_map[? "y"]			//y
 	var xs = cur_map[? "xs"]		//xscale
 	var ys = cur_map[? "ys"]		//yscale
-	if(speed_needed) {
+	if(speed_needed)
+	{
 		var hs = cur_map[? "hs"]	//hspeed
 		var vs = cur_map[? "vs"]	//vspeed
 	}
-	if(active_group_needed) {
+	if(active_group_needed)
+	{
 		var act = cur_map[? "a"]	//active
 		var _group = cur_map[? "g"]	//group
 	}
-	if(is_switch) {
+	if(is_switch)
+	{
 		//var curr = cur_map[? "cur"]
 		var _max = cur_map[? "ma"]
 	}
@@ -55,7 +63,7 @@ for(var i = 0; i < ds_list_size(list); i++) {
 
 	#region Find layer
 	//var lay = cur_map[? "l"]		//layer
-	var lay = 0
+	var lay = "Instances"
 	var dep = 0
 	switch(obj) {
 		case oHbot:
@@ -87,24 +95,28 @@ for(var i = 0; i < ds_list_size(list); i++) {
 	#endregion
 	#region Create the instance
 	var inst = instance_create_layer(xx,yy,lay,oEditor_object)
-	with(inst) {
+	with(inst)
+	{
 		id.obj = obj
 		
-		//show_message("OBJECT "+string(id)+": "+string(obj))
+		
 		
 		id.spr = spr
 		id.sprite_index = spr
 		image_xscale = xs
 		image_yscale = ys
-		if(speed_needed) {
+		if(speed_needed)
+		{
 			hsp = hs
 			vsp = vs
 		}
-		if(active_group_needed) {
+		if(active_group_needed)
+		{
 			active = act
 			group = _group
 		}
-		if(is_switch) {
+		if(is_switch)
+		{
 			//current = curr
 			current = 0;
 			max_ = _max
