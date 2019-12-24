@@ -9,7 +9,8 @@
         "ba70ba27-f151-4741-9ac7-fe73877902f9",
         "1a8044cb-1ce6-4ddb-8c04-4412158fb0b8",
         "79809ce5-ec64-4992-b242-4888eedecf15",
-        "aeeb2f49-b6e3-4128-9a6a-a8acbf9cf76b"
+        "aeeb2f49-b6e3-4128-9a6a-a8acbf9cf76b",
+        "2c5d3a7d-b043-40e2-97fb-fa8ae3bb6fed"
     ],
     "filterType": "GMObject",
     "folderName": "interface and menu",

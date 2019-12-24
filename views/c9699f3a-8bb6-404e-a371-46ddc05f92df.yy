@@ -8,9 +8,12 @@
         "eb10d318-fc2e-4ada-8e6b-7de8310bd6d0",
         "3866a787-9407-4db5-86a7-5f4d833ea980",
         "d8b42681-467d-4e20-b091-abaa926a0fe2",
-        "a9db8c34-0736-476b-b479-9d89eeff0a43",
         "33a785a2-26ca-495b-b048-413bd9905ed2",
-        "1bafa413-b186-4e56-acbd-3a2215de19e4"
+        "1bafa413-b186-4e56-acbd-3a2215de19e4",
+        "c2f50b87-a985-484f-8a2a-076521c49d8e",
+        "e5c47b44-b692-4acc-b030-7f80286220b7",
+        "88ebcd52-d356-4e23-b493-faa5c363dc03",
+        "a9db8c34-0736-476b-b479-9d89eeff0a43"
     ],
     "filterType": "GMObject",
     "folderName": "editor",

@@ -1,5 +1,5 @@
 /// @desc
-if(mouse_y < 730 and mouse_y > 0 and mouse_x > 0 and mouse_x < room_width) {
+if(mouse_y < 730 and mouse_y > 0 and mouse_x > 0 and mouse_x < room_width - 256) {
 	if(instrument == "place")
 	{
 		var obj = arg
@@ -42,5 +42,12 @@ if(mouse_y < 730 and mouse_y > 0 and mouse_x > 0 and mouse_x < room_width) {
 		o.spr = spr
 		o.sprite_index = spr
 		o.obj = obj
+		with(o) {
+			if(place_meeting(x,y,oEditor_object))
+				instance_destroy()
+		}
+	}
+	if(!keyboard_check(vk_shift)) {
+		ds_list_clear(selected_object)
 	}
 }

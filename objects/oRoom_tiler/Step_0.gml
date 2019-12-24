@@ -1,24 +1,27 @@
 /// @desc
+with(oWall) {
+if(object_index == oWall) {
+//var tiledata = 46
+var tilemap_id = layer_tilemap_get_id("Tile_layer")
+#region Stupid code
+var up_tile =		  position_meeting(x,bbox_top-1,oWall)				and !position_meeting(x,bbox_top-1,oHbot)
+//var up_left_tile =	  position_meeting(bbox_left-1,bbox_top-1,oWall)	and !position_meeting(bbox_left-1,bbox_top-1,oHbot)
+//var up_right_tile =	  position_meeting(bbox_right+1,bbox_top-1,oWall)	and !position_meeting(bbox_right+1,bbox_top-1,oHbot)
+var left_tile =		  position_meeting(bbox_left-1,y,oWall)				and !position_meeting(bbox_left-1,y,oHbot)
+var right_tile =	  position_meeting(bbox_right+1,y,oWall)			and !position_meeting(bbox_right+1,y,oHbot)
+//var down_left_tile =  position_meeting(bbox_left-1,bbox_bottom+1,oWall)and !position_meeting(bbox_left-1,bbox_bottom+1,oHbot)
+var down_tile =		  position_meeting(x,bbox_bottom+1,oWall)			and !position_meeting(x,bbox_bottom+1,oHbot)
+//var down_right_tile = position_meeting(bbox_right+1,bbox_bottom+1,oWall)and !position_meeting(bbox_right+1,bbox_bottom+1,oHbot)
+var up_left_tile = false
+var up_right_tile = false
+var down_right_tile = false
+var down_left_tile = false
 
 
-for(var yy = 0; yy < height; yy++)
-{
-	for(var xx = 0; xx < width; xx++)
-	{
-		var up_tile = grid[# xx,yy-1]
-		var down_tile = grid[# xx,yy+1]
-		var right_tile = grid[# xx+1,yy]
-		var left_tile = grid[# xx-1,yy]
-		var up_left_tile = grid[# xx-1,yy-1]
-		var down_left_tile = grid[# xx-1,yy+1]
-		var up_right_tile = grid[# xx+1,yy-1]
-		var down_right_tile = grid[# xx+1,yy+1]
-		
-		#region Find the tiledata
-		var tiledata = up_tile * 2 + up_left_tile * 1 + up_right_tile * 4 +
-		  left_tile * 8 + right_tile * 16 + down_left_tile * 32 +
-		    down_tile * 64 + down_right_tile * 128
-		#region The most stupid code EVER
+var tiledata = up_left_tile * 1 + up_tile * 2 + up_right_tile * 4 +
+  left_tile * 8 + right_tile * 16 + down_left_tile * 32 +
+    down_tile * 64 + down_right_tile * 128
+#region The most stupid code EVER
 		switch(tiledata) {
 			case 0:
 				tiledata = 46
@@ -163,9 +166,7 @@ for(var yy = 0; yy < height; yy++)
 				break;
 		}
 		#endregion
-		
-		#endregion
-		
-		draw_tile(tSet,tiledata,0,xx,yy)
-	}
+#endregion
+tilemap_set_at_pixel(tilemap_id,tiledata,x,y)
+}
 }

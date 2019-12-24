@@ -124,6 +124,8 @@ switch(state) {
 		}
 		else {
 			image_xscale = abs(image_xscale) * move
+			while(place_meeting(x,y,oWall))
+				x -= sign(image_xscale)
 		}
 		
 		
@@ -229,6 +231,8 @@ switch(state) {
 			}
 			else {
 				image_xscale = abs(image_xscale) * move
+				while(place_meeting(x,y,oWall))
+					x -= sign(image_xscale)
 			}
 		}
 		else {
@@ -342,5 +346,15 @@ switch(state) {
 	//	state = splayer.move
 	//}
 	#endregion
+}
+#endregion
+#region Killbox and flash
+if(place_meeting(x,y,oKillbox)) {
+	if(!layer_exists("Effects"))
+		layer_create(-10000,"Effects")
+	var eff = instance_create_layer(x,y,"Effects",oFlash_effect)
+	eff.color = c_red
+	
+	room_restart()
 }
 #endregion

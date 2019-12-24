@@ -71,22 +71,47 @@ for(var i = 0; i < ds_list_size(list); i++)
 			//lay = 0
 			dep = -400
 			break
+		case oVbot:
+			lay = "Player"
+			//lay = 0
+			dep = -400
+			break
+		case oBot:
+			lay = "Player"
+			//lay = 0
+			dep = -400
+			break
 		case oSaver:
 			lay = "Instances"
 			//lay = 1
 			dep = -300
 			break
-		case oActivateable:
+		case oDoor:
 			lay = "Instances"
 			//lay = 1
 			dep = -300
 			break
+		//case oPlatform:
+		//	lay = "Instances"
+		//	//lay = 1
+		//	dep = -300
+		//	break
 		case oTerminal:
 			//lay = 2
 			dep = -200
 			lay = "Back"
 			break
 		case oWall:
+			lay = "Wall"
+			//lay = 3
+			dep = -100
+			break
+		case oSlime_wall:
+			lay = "Wall"
+			//lay = 3
+			dep = -100
+			break
+		case oKillbox:
 			lay = "Wall"
 			//lay = 3
 			dep = -100
