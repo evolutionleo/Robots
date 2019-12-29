@@ -47,7 +47,7 @@ if(mouse_y < 730 and mouse_y > 0 and mouse_x > 0 and mouse_x < room_width - 256)
 				instance_destroy()
 		}
 	}
-	if(!keyboard_check(vk_shift)) {
+	if(!keyboard_check(vk_control)) {
 		ds_list_clear(selected_object)
 	}
 }

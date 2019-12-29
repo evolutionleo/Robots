@@ -131,7 +131,7 @@ switch(state) {
 		
 		hsp += base_hsp
 		
-		if(place_meeting(x,y+1,oWall)) {
+		if(place_meeting(x,y+1,oWall) and !place_meeting(x,y+1,oSlime_wall)) {
 			if(kjump)
 				vsp -= jumpsp
 		}
@@ -148,8 +148,10 @@ switch(state) {
 			if(robtype == rob.xstick) {
 				if(place_meeting(x+sign(image_xscale),y,oWall) and !place_meeting(x+sign(image_xscale),y,oSlime_wall)) {
 					state = splayer.xsticked
-					//stickx = x
-					//sticky = y
+					if(image_xscale > 0)
+						stickx = bbox_right + 1
+					else stickx = bbox_left - 1
+					sticky = y
 				}
 				else {
 					alarm[1] = 120
@@ -158,8 +160,8 @@ switch(state) {
 			else if(robtype == rob.ystick) {
 				if(can_transform()) {
 					state = splayer.transformating
-					//stickx = x
-					//sticky = y
+					stickx = x
+					sticky = bbox_bottom+1
 				}
 			}
 			else if(robtype == rob.hacker and place_meeting(x,y,oTerminal)) {
@@ -200,7 +202,8 @@ switch(state) {
 		base_hsp = move * sticksp
 		hsp += base_hsp
 		vsp = 0
-		if(kabil or (!place_meeting(stickx+1,sticky,oWall) and !place_meeting(stickx-1,sticky,oWall))) {
+		if(kabil) {
+		//or (!position_meeting(stickx,sticky,oWall))) {
 			state = splayer.stand
 		}
 		
@@ -214,7 +217,7 @@ switch(state) {
 		hsp = 0
 		movey = kdown - kup
 		vsp = movey * sticksp
-		if(kabil) or (!place_meeting(stickx,sticky+1,oWall)) 
+		if(kabil) or (!position_meeting(stickx,sticky+1,oWall)) 
 		//or place_meeting(x,y,oHbot))
 		{
 			state = splayer.back_transformating
@@ -248,8 +251,11 @@ switch(state) {
 			if(robtype == rob.xstick) {
 				if(place_meeting(x+sign(image_xscale),y,oWall) and !place_meeting(x+sign(image_xscale),y,oSlime_wall)) {
 					state = splayer.xsticked
-					//stickx = x
-					//sticky = y
+					if(image_xscale > 0)
+						stickx = bbox_right + 1
+					else
+						stickx = bbox_left - 1
+					sticky = y
 				}
 				else {
 					alarm[1] = 120
@@ -258,8 +264,8 @@ switch(state) {
 			else if(robtype == rob.ystick) {
 				if(can_transform()) {
 					state = splayer.transformating
-					//stickx = x
-					//sticky = y
+					stickx = x
+					sticky = bbox_bottom+1
 				}
 			}
 			else if(robtype == rob.hacker and place_meeting(x,y,oTerminal)) {
@@ -273,7 +279,7 @@ switch(state) {
 			//	state = splayer.gravity_cancel
 			//}
 		}
-		if(kjump and place_meeting(x,y+1,oWall))
+		if(kjump and place_meeting(x,y+1,oWall) and !place_meeting(x,y+1,oSlime_wall))
 			vsp -= jumpsp
 		
 		if(sprite_index != spr) {
@@ -295,8 +301,8 @@ switch(state) {
 		break
 	#endregion
 	case splayer.transformating: #region Transform state
-		if(sprite_index != sVbot_transofrmation)
-			sprite_index = sVbot_transofrmation
+		if(sprite_index != sVbot_transformation)
+			sprite_index = sVbot_transformation
 		vsp = 0
 		hsp = 0
 		break

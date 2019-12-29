@@ -1,7 +1,7 @@
 if(place_meeting(x+hsp,y,oPushable) or place_meeting(x,y-1,oPushable)) {
 	var list = ds_list_create()
 	//var list1 = ds_list_create()
-	var count = instance_place_list(x+hsp,y,oPushable,list,false) 
+	var count = instance_place_list(x+hsp,y,oPushable,list,false)
 	//+ instance_place_list(x,y-1,oPushable,list1,false)
 	//ds_list_add_list(list,list1)
 	for(var i = 0; i < count; i++) {

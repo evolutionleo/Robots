@@ -1,5 +1,5 @@
 var prev_index = mask_index
-mask_index = sVbot_transofrmation
+mask_index = sVbot_transformation
 if(place_meeting(x,y,oWall)) {
 	var flag = false
 	alarm[1] = 40
