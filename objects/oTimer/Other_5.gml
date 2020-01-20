@@ -23,7 +23,9 @@ if(room == rlast and !global.run_invalid) {
 	//	}
 	//}
 	//ini_close()
-	var map = ds_map_create()
+	//var map = ds_map_create()
 	//ds_map_add(map,,)
-	http_request("https://innopolistudy.ru/evoleo/?security=e79e88b1d7e656d84d346d41b98ba232&action=lb_put&name=" + global.Player_name + "&time=" + string(time) + "&version=" + GM_version,"GET",map,"")
+	var str = "name="+global.Player_name+"&version="+GM_version+"&time="+string(time)
+	//http_request("https://innopolistudy.ru/evoleo/?security=e79e88b1d7e656d84d346d41b98ba232&action=lb_put&name=" + global.Player_name + "&time=" + string(time) + "&version=" + GM_version,"GET",map,"")
+	request = http_post_string("http://62.113.112.109/robots.php?action=lb_put&security="+global.security,str)
 }

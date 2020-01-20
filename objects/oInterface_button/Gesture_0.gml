@@ -91,6 +91,7 @@ else if(type == "editor edit") {
 	room_goto(rEditor)
 }
 else if(type == "editor play") {
+	global.content = LoadJSONfromFile("File.txt")
 	room_goto(rEmpty)
 }
 else if(type == "clear all") {
@@ -104,4 +105,9 @@ else if(type == "bind")
 	if(!any_bindkey_activated())
 		active = true
 }
-
+else if(type == "online level select") {
+	var prepared = ds_map_create()
+	ds_map_add_map(prepared,"ROOT",content)
+	global.content = prepared
+	room_goto(rEmpty)
+}

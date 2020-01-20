@@ -217,7 +217,7 @@ switch(state) {
 		hsp = 0
 		movey = kdown - kup
 		vsp = movey * sticksp
-		if(kabil) or (!position_meeting(stickx,sticky+1,oWall)) 
+		if(kabil) or !meeting() or place_meeting(x,y,oWall)
 		//or place_meeting(x,y,oHbot))
 		{
 			state = splayer.back_transformating
@@ -309,15 +309,14 @@ switch(state) {
 		
 	#endregion
 	case splayer.back_transformating: #region Transformating back state
-		vsp = 0
-		hsp = 0
 		if(sprite_index != sVbot_back_transofrmation)
 			sprite_index = sVbot_back_transofrmation
-			
+		vsp = 0
+		hsp = 0
 		break
 	#endregion
 	case splayer.hacking: #region Hacking state
-		if(!place_meeting(x,y,oTerminal) or kabil) {
+		if(!place_meeting(x,y,oTerminal) or kabil or instance_place(x,y,oTerminal).hacked == false) {
 			state = splayer.move
 		}
 		break
@@ -356,10 +355,7 @@ switch(state) {
 #endregion
 #region Killbox and flash
 if(place_meeting(x,y,oKillbox)) {
-	if(!layer_exists("Effects"))
-		layer_create(-10000,"Effects")
-	var eff = instance_create_layer(x,y,"Effects",oFlash_effect)
-	eff.color = c_red
+	create_effect("flash",c_red)
 	
 	room_restart()
 }

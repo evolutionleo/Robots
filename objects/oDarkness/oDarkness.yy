@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oDarkness",
     "eventList": [
-        
+        {
+            "id": "4ee4be49-e644-45cd-ad0c-0636cd82049f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "b5137f08-ce97-47b6-96c3-374b1674c799"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -36,6 +45,20 @@
             "value": "0",
             "varName": "rob_id",
             "varType": 1
+        },
+        {
+            "id": "14e1ddb6-f5f3-421b-977d-11e116f03e44",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "\"select switch\"",
+            "varName": "type",
+            "varType": 2
         }
     ],
     "solid": false,

@@ -9,7 +9,10 @@ layer_create(-100,"Wall")
 #endregion
 #region Scan the data
 
-var map = LoadJSONfromFile("File.txt")
+//if(variable_global_exists("content"))
+//	var map = json_decode(global.content)
+//else
+	var map = LoadJSONfromFile("File.txt")
 var list = ds_list_create()
 list = map[? "ROOT"]
 #region Camera stuff
