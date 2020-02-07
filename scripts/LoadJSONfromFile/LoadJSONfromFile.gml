@@ -1,3 +1,5 @@
+///@arg fname
+
 var filename = argument0
 
 var buffer = buffer_load(filename)

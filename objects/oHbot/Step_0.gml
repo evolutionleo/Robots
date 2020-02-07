@@ -1,37 +1,38 @@
 /// @description 
 #region Input
-if(!instance_exists(oSwitch) or instance_find(oHbot,oSwitch.current) == self) {
-//kjump = keyboard_check_pressed(vk_space)
-//kup = keyboard_check(ord("W"))
-//kleft = keyboard_check(ord("A"))
-//kdown = keyboard_check(ord("S"))
-//kright = keyboard_check(ord("D"))
-//kabil = keyboard_check_pressed(ord("E"))		//Ability key
-//kinter = keyboard_check_pressed(ord("F"))		//Interact key
+if(control) {
+	if(!instance_exists(oSwitch) or instance_find(oHbot,oSwitch.current) == self)
+	{
+		//kjump = keyboard_check_pressed(vk_space)
+		//kup = keyboard_check(ord("W"))
+		//kleft = keyboard_check(ord("A"))
+		//kdown = keyboard_check(ord("S"))
+		//kright = keyboard_check(ord("D"))
+		//kabil = keyboard_check_pressed(ord("E"))		//Ability key
+		//kinter = keyboard_check_pressed(ord("F"))		//Interact key
 
 
 
-kjump = keyboard_check_pressed(oInput.binds[? "jump"])
-kup = keyboard_check(oInput.binds[? "up"])
-kright = keyboard_check(oInput.binds[? "right"])
-kleft = keyboard_check(oInput.binds[? "left"])
-kdown = keyboard_check(oInput.binds[? "down"])
-kabil = keyboard_check_pressed(oInput.binds[? "abil"])		//Ability key
-kinter = keyboard_check_pressed(oInput.binds[? "inter"])	//Interact key
+		kjump = keyboard_check_pressed(oInput.binds[? "jump"])
+		kup = keyboard_check(oInput.binds[? "up"])
+		kright = keyboard_check(oInput.binds[? "right"])
+		kleft = keyboard_check(oInput.binds[? "left"])
+		kdown = keyboard_check(oInput.binds[? "down"])
+		kabil = keyboard_check_pressed(oInput.binds[? "abil"])		//Ability key
+		kinter = keyboard_check_pressed(oInput.binds[? "inter"])	//Interact key
 
-//kbox = keyboard_check_released(ord("Q")) //Interact with a box
-//kterm = keyboard_check_pressed(ord("R"))
-}
-else {
-kjump = false
-kup = false
-kleft = false
-kdown = false
-kright = false
-kabil = false
-kinter = false
-//kbox = false
-//kterm = false
+		//kbox = keyboard_check_released(ord("Q")) //Interact with a box
+		//kterm = keyboard_check_pressed(ord("R"))
+	}
+	else
+	{
+		input_reset()
+	}
+	
+	if kjump and vsp >= 0
+	{
+		jump_offset = max_jump_offset
+	}
 }
 #endregion
 #region Calculate movement
@@ -131,9 +132,13 @@ switch(state) {
 		
 		hsp += base_hsp
 		
-		if(place_meeting(x,y+1,oWall) and !place_meeting(x,y+1,oSlime_wall)) {
-			if(kjump)
+		if(on_ground() and !place_meeting(x,y+1,oSlime_wall)) {
+		//or jump_offset > 0 and place_meeting(x,y+1,oWall)) {
+			if(jump_offset > 0) {
 				vsp -= jumpsp
+				jump_offset = 0
+				coyot_time = 0
+			}
 		}
 		else {
 			vsp += grv
@@ -279,8 +284,15 @@ switch(state) {
 			//	state = splayer.gravity_cancel
 			//}
 		}
-		if(kjump and place_meeting(x,y+1,oWall) and !place_meeting(x,y+1,oSlime_wall))
-			vsp -= jumpsp
+		
+		if(on_ground() and !place_meeting(x,y+1,oSlime_wall)) {
+		//or jump_offset > 0 and place_meeting(x,y+1,oWall)) {
+			if(jump_offset > 0) {
+				vsp -= jumpsp
+				jump_offset = 0
+				coyot_time = 0
+			}
+		}
 		
 		if(sprite_index != spr) {
 			sprite_index = spr
@@ -359,4 +371,28 @@ if(place_meeting(x,y,oKillbox)) {
 	
 	room_restart()
 }
+#endregion
+#region Advanced platforming
+if(place_meeting(x,y+1,oWall)) {
+	coyot_time = max_coyot_time
+}
+else {
+	coyot_time--
+}
+
+if(kjump) {
+	coyot_time = 0
+}
+
+
+if(place_meeting(x,y+1,oWall)) {
+	jump_offset = 0
+}
+else {
+	//else
+	//{
+		jump_offset--
+	//}
+}
+
 #endregion

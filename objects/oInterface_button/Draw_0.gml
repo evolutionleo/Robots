@@ -49,8 +49,17 @@ else if(type == "online level select") {
 	draw_set_valign(fa_bottom)
 	draw_text(bbox_right-10,bbox_bottom-10,"by: "+creator_name)
 }
-else if(type == "to menu" or type == "exit" or type == "level slide") {
+else if(type == "to menu" or type == "exit" or type == "level slide" or type == "help") {
 	draw_text(x,y,"")
+}
+else if(type == "login") {
+	draw_text(x,y,"Login")
+}
+else if(type == "sign up") {
+	draw_text(x,y,"Signup4")
+}
+else if(type == "share") {
+	draw_text(x,y,"Upload")
 }
 else {
 	draw_text(x,y,type)

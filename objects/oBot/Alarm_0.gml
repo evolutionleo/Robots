@@ -1,7 +1,7 @@
 /// @description Hack the system!
 var term = instance_place(x,y,oTerminal)
 with(term) {
-	hacked = true
+	hacked = !hacked
 	with(oActivateable)
 	{
 		//if(group == abs(other.group))

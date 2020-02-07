@@ -48,7 +48,7 @@ pushx()
 var colx = place_meeting(x+hsp,y,obj)
 if(colx)
 {
-	if(object_index == oHbot and !place_meeting(x+hsp,y-10,obj)) {
+	if(object_index == oHbot and !place_meeting(x+hsp,y-10,obj) and vsp <= 0) {
 		while(place_meeting(x+hsp,y,obj)) {
 			y--
 		}

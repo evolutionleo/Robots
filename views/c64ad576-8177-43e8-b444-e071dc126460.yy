@@ -5,7 +5,8 @@
     "name": "c64ad576-8177-43e8-b444-e071dc126460",
     "children": [
         "cc5ff8ad-24f0-41cf-b787-509a04718d5b",
-        "e70d5143-6781-450c-ab0b-5fb094537fbb"
+        "e70d5143-6781-450c-ab0b-5fb094537fbb",
+        "805282b4-0920-4c9e-a07a-8d53f13ea258"
     ],
     "filterType": "GMScript",
     "folderName": "JSON",

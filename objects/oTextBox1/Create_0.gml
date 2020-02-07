@@ -1,6 +1,17 @@
-  /// @description  VERY simple text box....
+/// @desc VERY simple text box....
 ini_open("save.ini")
-Text = ini_read_string("Player name","Player name","PlayerName")
+if(type == "player_name") {
+	Text = ini_read_string("Player name","Player name","PlayerName")
+	global.Player_name = Text
+}
+else if(type == "password"){
+	Text = ini_read_string("Player name","Player name","Password")
+	global.password = Text
+}
 ini_close()
-keyboard_string = Text
-global.Player_name = Text
+
+
+if(instance_number(object_index) == 1)
+	keyboard_string = Text
+
+active = false

@@ -7,7 +7,8 @@
         "cf65e956-fec8-470e-918b-4a592e4076c1",
         "66c9c34d-0499-4e17-89c4-0de27ef5d38e",
         "f6ceeea5-2f64-497c-9768-5f8ea50ac73c",
-        "1b7d84bc-752d-43a4-9ee8-6d49bc357df8"
+        "dbd6347b-71e5-48c3-ade2-466f9c58f32b",
+        "2a3c7428-f5e8-44ff-abdb-3b6025280a9b"
     ],
     "filterType": "GMScript",
     "folderName": "just helpful ones i made myself",

@@ -83,7 +83,22 @@
         
     ],
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "0fc4e1c5-6bea-4285-b78b-2fe08eb1baf8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "player_name",
+            "varName": "type",
+            "varType": 2
+        }
+    ],
     "solid": false,
     "spriteId": "b49b016c-2ddf-4ecc-95fc-b2e216cbf047",
     "visible": true

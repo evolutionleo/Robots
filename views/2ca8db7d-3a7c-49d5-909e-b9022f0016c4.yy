@@ -12,7 +12,8 @@
         "9b7a287c-c3d9-4f34-be52-f87d4d3c37fd",
         "889e7ab4-e88d-4367-821e-5fd815cdf685",
         "6abfdedb-cae7-43f0-80f1-b1c27b453f33",
-        "a5a5c838-567a-472d-a3df-8c4aa635388b"
+        "a5a5c838-567a-472d-a3df-8c4aa635388b",
+        "77cd68cc-e84f-4455-9a95-43dffad647d9"
     ],
     "filterType": "GMScript",
     "folderName": "collision shenanigans",

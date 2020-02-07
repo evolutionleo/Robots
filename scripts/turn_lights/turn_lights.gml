@@ -1,3 +1,5 @@
+///@arg toggle
+
 var toggle = argument0
 
 if(layer_exists("Darkness") or instance_exists(oDarkness)) {

@@ -1,3 +1,5 @@
+///@arg time_in_msecs
+
 var time = argument0
 msecs =	int64(time / 1000		% 1000)
 secs =	int64(time / 1000000	% 60)

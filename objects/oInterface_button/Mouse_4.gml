@@ -1,6 +1,6 @@
 /// @desc
 
-if(active and os_type == os_browser)
+if active
 {
 	
 	
@@ -8,9 +8,18 @@ if(type == "level select")
 {
 	room_goto(level + r1 - 1)
 }
-else if(type == "custom level select")
-{
-	room_goto(level + rEmpty - 1)
+else if(type == "login") {
+	with(oLogin) {
+		alarm[1] = 1
+	}
+}
+else if(type == "sign up") {
+	with(oLogin) {
+		alarm[0] = 1
+	}
+}
+else if(type == "share") {
+	
 }
 else if(type == "level slide")
 {
@@ -20,26 +29,6 @@ else if(type == "level slide")
 		{
 			level += other.slide_amount
 			if(level + r1 - 1 > rlast or level < 1)
-			{
-				visible = false
-				active = false
-			}
-			else
-			{
-				visible = true
-				active = true
-			}
-		}
-	}
-}
-else if(type == "custom level slide")
-{
-	with(oInterface_button)
-	{
-		if(type == "custom level select")
-		{
-			level += other.slide_amount
-			if(level + rEmpty - 1 > rEditor or level < 1)
 			{
 				visible = false
 				active = false
@@ -76,14 +65,6 @@ else if(type == "options")
 {
 	room_goto(rSettings)
 }
-else if(type == "delete")
-{
-	file_delete("save.ini")
-	file_delete("inputs.ini")
-	file_delete("Leaderboards.ini")
-	file_delete("README.ini")
-	game_restart()
-}
 else if(type == "editor") {
 	room_goto(rEditor_select)
 }
@@ -111,3 +92,38 @@ else if(type == "online level select") {
 	global.content = prepared
 	room_goto(rEmpty)
 }
+else if(type == "help") {
+	room_goto(rTutorial)
+}
+//else if(type == "delete")
+//{
+//	file_delete("save.ini")
+//	file_delete("inputs.ini")
+//	file_delete("Leaderboards.ini")
+//	file_delete("README.ini")
+//	game_restart()
+//}
+//else if(type == "custom level slide")
+//{
+//	with(oInterface_button)
+//	{
+//		if(type == "custom level select")
+//		{
+//			level += other.slide_amount
+//			if(level + rEmpty - 1 > rEditor or level < 1)
+//			{
+//				visible = false
+//				active = false
+//			}
+//			else
+//			{
+//				visible = true
+//				active = true
+//			}
+//		}
+//	}
+//}
+//else if(type == "custom level select")
+//{
+//	room_goto(level + rEmpty - 1)
+//}
