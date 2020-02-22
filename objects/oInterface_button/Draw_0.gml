@@ -15,6 +15,9 @@ else if(type == "custom level select" and visible) {
 else if(type == "select") {
 	draw_text(x,y,"Select level")
 }
+else if(type == "log in") {
+	draw_text(x,y,"Login")
+}
 else if(type == "new game") {
 	draw_text(x,y,"New game")
 }
@@ -42,24 +45,28 @@ else if(type == "editor play") {
 else if(type == "clear all") {
 	draw_text(x,y,"Delete all")
 }
-else if(type == "online level select") {
-	draw_text(x,y,lvl_name)
-	draw_set_font(fCreator)
-	draw_set_halign(fa_right)
-	draw_set_valign(fa_bottom)
-	draw_text(bbox_right-10,bbox_bottom-10,"by: "+creator_name)
+else if(type == "custom select") {
+	//draw_text(x,y,lvl_name)
+	//draw_set_font(fCreator)
+	//draw_set_halign(fa_right)
+	//draw_set_valign(fa_bottom)
+	//draw_text(bbox_right-10,bbox_bottom-10,"by: "+creator_name)
 }
-else if(type == "to menu" or type == "exit" or type == "level slide" or type == "help") {
+else if(image_index > 1 or type == "to menu" or type == "exit" or type == "level slide" or type == "help" or 
+type == "custom play" or type == "custom slide" or type == "search") {
 	draw_text(x,y,"")
 }
 else if(type == "login") {
 	draw_text(x,y,"Login")
 }
 else if(type == "sign up") {
-	draw_text(x,y,"Signup4")
+	draw_text(x,y,"Signup")
 }
 else if(type == "share") {
 	draw_text(x,y,"Upload")
+}
+else if(type == "editor list") {
+	draw_text(x,y,"Browse")
 }
 else {
 	draw_text(x,y,type)

@@ -1,3 +1,3 @@
 /// @description 
-//new_collision()
+//collision_without_add(oPushable)
 collision(oWall)

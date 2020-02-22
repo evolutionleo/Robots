@@ -63,6 +63,36 @@
             "enumb": 4,
             "eventtype": 7,
             "m_owner": "81f9a53b-6426-4347-8a90-9999bcf25919"
+        },
+        {
+            "id": "9d276968-70aa-4f00-9326-8c5c5e181210",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 12,
+            "m_owner": "81f9a53b-6426-4347-8a90-9999bcf25919"
+        },
+        {
+            "id": "a7879272-4f03-44a8-9669-ee89d70d313b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 2,
+            "m_owner": "81f9a53b-6426-4347-8a90-9999bcf25919"
+        },
+        {
+            "id": "4988f506-11b5-4345-9322-bbaffeb81def",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 62,
+            "eventtype": 7,
+            "m_owner": "81f9a53b-6426-4347-8a90-9999bcf25919"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -97,20 +127,6 @@
             "varType": 2
         },
         {
-            "id": "b782b428-13d6-40f7-9dbc-947f9686935e",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "level",
-            "varType": 1
-        },
-        {
             "id": "4f726ac0-3685-479c-aa0b-f777e94bc645",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -123,6 +139,34 @@
             "value": "True",
             "varName": "active",
             "varType": 3
+        },
+        {
+            "id": "681a9363-3281-45bb-91db-470381a70694",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "n",
+            "varType": 1
+        },
+        {
+            "id": "b782b428-13d6-40f7-9dbc-947f9686935e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "level",
+            "varType": 1
         },
         {
             "id": "4d0a5ff5-38d7-4308-8631-cb4e4a688849",
@@ -179,6 +223,20 @@
             "value": "0",
             "varName": "bind_value",
             "varType": 4
+        },
+        {
+            "id": "a2e74101-2785-4ecf-8405-62665d0ce672",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "my_id",
+            "varType": 1
         }
     ],
     "solid": false,

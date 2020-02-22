@@ -17,7 +17,10 @@
         "da184d1d-36b9-423d-bd87-ce4e176dcfb0",
         "bf3dda89-42c0-4bd8-8b60-4e6b247fec08",
         "e800db04-73fa-431a-87ec-2fe768a9fc8f",
-        "61921be6-4846-4c54-80c7-6c9510984711"
+        "61921be6-4846-4c54-80c7-6c9510984711",
+        "b7108077-2252-4c16-b65e-47cf014adca3",
+        "8fa55b97-71f7-4699-b610-ef5b80ad4e02",
+        "3bed36d8-1916-4007-a19b-fc9f69195dec"
     ],
     "filterType": "GMObject",
     "folderName": "in-level",

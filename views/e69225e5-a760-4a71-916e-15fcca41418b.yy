@@ -10,7 +10,8 @@
         "fa283848-5ee3-4e44-a637-6b525ce4ca13",
         "4dacb475-c40b-4f93-a428-570dfc09469d",
         "e02caaee-3c52-44a5-a061-81f5db8716e1",
-        "78fb3ef1-a5aa-4fc1-85af-65b17d785609"
+        "78fb3ef1-a5aa-4fc1-85af-65b17d785609",
+        "9ebe7acd-0069-49be-91a1-7b9d8586db41"
     ],
     "filterType": "GMSprite",
     "folderName": "in-level",

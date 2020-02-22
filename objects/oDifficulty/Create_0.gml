@@ -1,0 +1,2 @@
+/// @desc
+difficulty = 0

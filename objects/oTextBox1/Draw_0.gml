@@ -7,6 +7,9 @@ if(type == "player_name") {
 else if(type == "password") {
 	var txt = string_length(Text) * "*"
 }
+else {
+	var txt = Text
+}
 
 //draw_set_font(f0)
 //draw_set_color(c_ltgray);

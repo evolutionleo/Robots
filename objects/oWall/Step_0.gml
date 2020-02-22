@@ -1,2 +1,0 @@
-/// @description 
-//collision(oWall)

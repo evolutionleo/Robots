@@ -9,10 +9,19 @@ $dbname = "Robots";
 //Check if client copied this correctly..
 $needed_security = "xd{zXWA-Vj5RNt*5Z[y9w5@h'0pq";
 
-$action = $_GET['action'];
-$security = $_GET['security'];
+if(isset($_POST['action'])) {
+	$action = $_POST['action'];
+}
+else {
+	$action = $_GET['action'];
+}
+if(isset($_POST['security'])) {
+	$action = $_POST['security'];
+}
+else {
+	$security = $_GET['security'];
+}
 
-// die("Hey there!");
 
 //...if not - kill the script
 if($security != $needed_security) {
@@ -79,6 +88,8 @@ switch ($action) {
 			$sql = "INSERT INTO profiles (name, password, status) VALUES ('$name', '$pass', 'player')";
 			$result = $conn->query($sql);
 
+			$sql = "INSERT INTO extended_profiles (rating, json) VALUES ()";
+
 			$_SESSION['name'] = $name;
 			$_SESSION['pass'] = $pass;
 
@@ -115,36 +126,67 @@ switch ($action) {
 		$time = $_POST['time'];
 		$version = $_POST['version'];
 
-		//Should check if a user is logged in...
-		$sql = "INSERT INTO Leaderboard (name, time, version, ip) VALUES ('$name',$time,'$version','unknown')";
+		$sql = "SELECT EXISTS(SELECT time FROM Leaderboard WHERE name='$name' AND version='$version')";
 		$query = $conn->query($sql);
+
+		$check_array = $query->fetch_assoc();
+		$check = $check_array["EXISTS(SELECT time FROM Leaderboard WHERE name='$name' AND version='$version')"];
+
+		if($check == True) {
+			$sql = "SELECT time FROM Leaderboard WHERE name='$name' AND version='$version'";
+			$query = $conn->query($sql);
+
+			$time_array = $query->fetch_assoc();
+			$time_old = $time_array['time'];
+
+			if($time_old > $time) {
+				$sql = "UPDATE Leaderboard SET time='$time' WHERE time='$time_old' AND name='$name'";
+				$query = $conn->query($sql);
+			}
+		}
+		else {
+			//Should check if a user is logged in...
+			$sql = "INSERT INTO Leaderboard (name, time, version, ip) VALUES ('$name',$time,'$version','unknown')";
+			$query = $conn->query($sql);
+		}
 		break;
 	case 'lvl_put':
-		$lvl_name = $_POST['level_name'];
 		if(!isset($_SESSION['name'])) {
 			$creator_name = $_POST['creator_name'];
 		}
 		else {
 			$creator_name = $_SESSION['name'];
 		}
-		$content = $_POST['content'];
 
-		$sql = "INSERT INTO Levels (level_name, creator_name, content) VALUES ('$lvl_name','$creator_name','$content')";
-		$query = $conn->$sql;
+		$lvl_name = $_POST['level_name'];
+		$content = $_POST['content'];
+		$desc = $_POST['description'];
+
+		$sql = "INSERT INTO Levels (level_name, creator_name, content, difficulty,rating,comments,description) VALUES ('$lvl_name','$creator_name','$content',0,0,'','$desc')";
+		$query = $conn->query($sql);
+
+		echo "Level succesfully uploaded!";
 		break;
 	case 'lvl_get':
-		$sql = "SELECT * FROM Levels";
+		$search = $_GET['search'];
+		if($search == "") {
+			$sql = "SELECT * FROM Levels ORDER BY rating DESC";
+		}
+		else {
+			$sql = "SELECT * FROM Levels WHERE level_name LIKE '%$search%' ORDER BY rating DESC";
+		}
 		$result = $conn->query($sql);
 		$i = 1;
 		if($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()) {
-				$time = $row['time'];
-				$name = $row['name'];
-				$version = $row['version'];
-				$id = $i;
-				$i += 1;
+				$cname = $row['creator_name'];
+				$lname = $row['level_name'];
+				$content = $row['content'];
+				$difficulty = $row['difficulty'];
+				$rating = $row['rating'];
+				$id = $row['id'];
 
-				$cur_map = ['time' => $time, 'name' => $name, 'version' => $version, 'id' => $id];
+				$cur_map = ['creator_name'=>$cname, 'level_name'=>$lname, 'id' => $id, 'content'=>$content, 'difficulty'=>$difficulty, 'rating'=>$rating];
 				array_push($arr, $cur_map);
 			}
 		}
@@ -153,6 +195,39 @@ switch ($action) {
 		break;
 	case 'endsession':
 		session_destroy();
+		echo "Session ended.";
+		break;
+	case 'like':
+		// $id = $_POST['id'];
+		$id = $_GET['id'];
+
+		$sql = "SELECT rating FROM Levels WHERE id='$id' LIMIT 1";
+		$query = $conn->query($sql);
+		$rating_array = $query->fetch_assoc();
+		$rating = $rating_array['rating'];
+
+		$rating = $rating + 1;
+		$sql = "UPDATE Levels SET rating='$rating' WHERE id='$id'";
+		$query = $conn->query($sql);
+
+		echo 'Success!';
+		break;
+	case 'starrate':
+		$diff = $_GET['difficulty'];
+		$id = $_GET['id'];
+
+		$sql = "UPDATE Levels SET difficulty='$diff' WHERE id='$id'";
+		$query = $conn->query($sql);
+
+		echo "Rate succseed!";
+		break;
+	case 'lvl_delete':
+		$id = $_GET['id'];
+
+		$sql = "DELETE FROM Levels WHERE id='$id'";
+		$query = $conn->query($sql);
+
+		echo "Deleted.";
 		break;
 	default:
 		echo "ERROR! INCORRECT COMMAND NAME";

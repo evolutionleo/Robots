@@ -1,4 +1,5 @@
 /// @description 
+event_inherited()
 #region Setup the shader
 upixelH = shader_get_uniform(shOutline,"pixelH")
 upixelW = shader_get_uniform(shOutline,"pixelW")

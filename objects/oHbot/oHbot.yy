@@ -45,16 +45,6 @@
             "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
         },
         {
-            "id": "bbe28844-d4f1-4e22-8a55-294b29b01d2e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 7,
-            "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
-        },
-        {
             "id": "a3b73e5b-9fe4-4233-b392-3a4918d3868e",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -62,16 +52,6 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 82,
             "eventtype": 9,
-            "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
-        },
-        {
-            "id": "d44ab918-6387-46c5-a194-b99e7c9310f3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 2,
-            "eventtype": 7,
             "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
         },
         {
@@ -113,11 +93,38 @@
             "enumb": 120,
             "eventtype": 9,
             "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
+        },
+        {
+            "id": "4d381839-4888-458d-ab92-00b5771951c2",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 7,
+            "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
+        },
+        {
+            "id": "f81fc951-0fd8-4163-a6b8-1904578d6056",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 40,
+            "eventtype": 7,
+            "m_owner": "6b83e09c-896e-4be7-829c-029f5a3a49f3"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
-        
+        {
+            "id": "be532c03-c24b-40b1-b07f-0e22ce93bd76",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "659c1ed8-6be9-4c9b-9a9a-5d0762ca1f13",
+            "propertyId": "33f12e98-8230-4a22-819a-b4dc8072146f",
+            "value": "17737"
+        }
     ],
     "parentObjectId": "d20e4585-801e-4c46-b956-9e165d90e652",
     "persistent": false,

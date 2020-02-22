@@ -92,6 +92,34 @@
             "resourceFilter": 1023,
             "value": "sWall",
             "varName": "spr",
+            "varType": 1
+        },
+        {
+            "id": "bf6df28a-007d-4790-8a74-babb937cf734",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "room_width-512",
+            "varName": "maxx",
+            "varType": 0
+        },
+        {
+            "id": "992a449e-4734-4e12-b010-0a0e61810883",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "room_height-256",
+            "varName": "maxy",
             "varType": 0
         }
     ],

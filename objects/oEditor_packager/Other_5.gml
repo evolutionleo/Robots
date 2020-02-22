@@ -78,11 +78,12 @@ with(oEditor_object) {
 #endregion
 #region Maps, lists, lists, maps and nothing else
 ds_map_add_list(map,"ROOT",root_list)
+ds_map_add(map,"Verified",false)
 var json = json_encode(map)
-global.content = json
+//global.content = json
 StringToFile("File.txt",json)
 
 //ds_map_destroy(map)
-//ds_list_destroy(root_list)
+ds_list_destroy(root_list)
 #endregion
 }

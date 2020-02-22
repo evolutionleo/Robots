@@ -10,8 +10,7 @@ layer_create(-100,"Wall")
 #endregion
 #region Scan the data
 
-var map = LoadJSONfromFile("File.txt")
-var list = ds_list_create()
+map = LoadJSONfromFile("File.txt")
 list = map[? "ROOT"]
 #region Camera stuff
 ////var camera_map = map[? "CAM"]

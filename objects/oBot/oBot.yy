@@ -5,16 +5,6 @@
     "name": "oBot",
     "eventList": [
         {
-            "id": "89bdddee-1e6a-43f6-b9d3-04fb82b8fbf6",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 2,
-            "eventtype": 3,
-            "m_owner": "02e4724c-7418-46c1-9941-9d2809a00a2e"
-        },
-        {
             "id": "bc338cb3-d4ba-43ca-bba4-978a6735a733",
             "modelName": "GMEvent",
             "mvc": "1.0",

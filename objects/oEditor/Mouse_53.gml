@@ -1,5 +1,5 @@
 /// @desc
-if(mouse_y < 730 and mouse_y > 0 and mouse_x > 0 and mouse_x < room_width - 256) {
+if(mouse_y < maxy and mouse_y > 0 and mouse_x > 0 and mouse_x < maxx) {
 	if(instrument == "place")
 	{
 		var obj = arg
@@ -42,9 +42,30 @@ if(mouse_y < 730 and mouse_y > 0 and mouse_x > 0 and mouse_x < room_width - 256)
 		o.spr = spr
 		o.sprite_index = spr
 		o.obj = obj
-		with(o) {
+		with(o)
+		{
 			if(place_meeting(x,y,oEditor_object))
 				instance_destroy()
+			switch(obj)
+			{
+				case oHbot:
+					image_xscale = 2.5
+					image_yscale = 2.5
+					jumpsp = 7
+					break
+				case oVbot:
+					image_xscale = 2.5
+					image_yscale = 2.5
+					break
+				case oBot:
+					image_xscale = 0.5
+					image_yscale = 0.5
+					break
+				case oDoor:
+					image_xscale = 0.5
+					image_yscale = 0.5
+					break	
+			}
 		}
 	}
 	if(!keyboard_check(vk_control)) {
