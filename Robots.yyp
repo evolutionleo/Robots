@@ -1407,6 +1407,14 @@
             }
         },
         {
+            "Key": "6c29253c-dee3-496a-aec8-68702519923c",
+            "Value": {
+                "id": "822a9161-867f-4006-a225-7ac9ccd11959",
+                "resourcePath": "objects\\oGifRecorder\\oGifRecorder.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6c713ae4-168a-47eb-a2c0-763d7c79419c",
             "Value": {
                 "id": "a7eeaca0-2707-4780-a3ca-a66d0e02a8d4",
@@ -1916,6 +1924,14 @@
                 "id": "85cb537e-0885-4e73-8ff4-afdaeca93664",
                 "resourcePath": "sounds\\aEpicMusic\\aEpicMusic.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "9710f2f8-a162-402f-804f-ede321a8e6a0",
+            "Value": {
+                "id": "140d7bba-4daf-4bcb-aad9-6e29d9cfca71",
+                "resourcePath": "sprites\\sLogo\\sLogo.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

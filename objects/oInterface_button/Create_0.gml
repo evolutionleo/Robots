@@ -1,7 +1,8 @@
 /// @desc
-lvl_name = "Undefined level"
-creator_name = "Undefined creator"
-if(type == "custom select") {
+//lvl_name = "Undefined level"
+//creator_name = "Undefined creator"
+if(type == "custom select")
+{
 	my_map = ds_map_create()
 }
 

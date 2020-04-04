@@ -6,20 +6,24 @@ if active
 	{
 		room_goto(level + r1 - 1)
 	}
-	else if(type == "login") {
+	else if(type == "login")
+	{
 		with(oLogin) {
 			alarm[1] = 1
 		}
 	}
-	else if(type == "log in") {
+	else if(type == "log in")
+	{
 		room_goto(rLogin)
 	}
-	else if(type == "sign up") {
+	else if(type == "sign up")
+	{
 		with(oLogin) {
 			alarm[0] = 1
 		}
 	}
-	else if(type == "share") {
+	else if(type == "share")
+	{
 		var content_map = LoadJSONfromFile("File.txt")
 		var content = content_map[? "ROOT"]
 		request = lvl_put(content)
@@ -69,42 +73,57 @@ if active
 	{
 		room_goto(rSettings)
 	}
-	else if(type == "editor") {
+	else if(type == "editor")
+	{
 		room_goto(rEditor_select)
 	}
-	else if(type == "editor edit") {
+	else if(type == "editor edit")
+	{
 		room_goto(rEditor)
 	}
-	else if(type == "editor play") {
+	else if(type == "editor play")
+	{
 		var content_map = LoadJSONfromFile("File.txt")
 		global.content = content_map[? "ROOT"]
 		global.locallevel = true
 		room_goto(rEmpty)
 	}
-	else if(type == "help") {
+	else if(type == "help")
+	{
 		room_goto(rTutorial)
 	}
-	else if(type == "custom slide") {
-		with(all) {
+	else if(type == "custom slide")
+	{
+		var levelmap = oCustom_level_list.levellist[| 0] // List is from "default" key, map is placed #n in the list
+		//Level map contains things like rating, difficulty of the level and content itself
+		if(is_undefined(levelmap))
+			exit
+		with(all)
+		{
 			if(variable_instance_exists(id,"n"))
 				n += other.slide_amount
 		}
-		with(oInterface_button) {
+		with(oInterface_button)
+		{
 			//if(type == "custom select")
 				update_button(type)
 		}
-		with(oText_marker) {
+		with(oText_marker)
+		{
 			update_textmarker()
 		}
 	}
-	else if(type == "editor list") {
+	else if(type == "editor list")
+	{
 		room_goto(rCustom_select)
 	}
-	else if(type == "search") {
+	else if(type == "search")
+	{
 		with(oCustom_level_list)
 			lvl_get(global.search)
 	}
-	else if(type == "custom play") {
+	else if(type == "custom play")
+	{
 		var levelmap = oCustom_level_list.levellist[| n-1] // List is from "default" key, map is placed #n in the list
 		//Level map contains things like rating, difficulty of the level and content itself
 		if(is_undefined(levelmap))
@@ -127,7 +146,8 @@ if active
 		global.locallevel = false
 		room_goto(rEmpty)
 	}
-	else if(type == "clear all") {
+	else if(type == "clear all")
+	{
 		with(oEditor_object)
 			instance_destroy()
 	}
@@ -139,7 +159,8 @@ if active
 		file_delete("README.ini")
 		game_restart()
 	}
-	else if(type == "rating+") {
+	else if(type == "rating+")
+	{
 		request = like(my_id)
 	}
 } // If not active

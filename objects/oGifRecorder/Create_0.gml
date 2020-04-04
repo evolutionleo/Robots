@@ -1,0 +1,2 @@
+/// @desc
+isRecording = false

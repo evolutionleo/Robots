@@ -5,6 +5,8 @@
 //else {
 //}
 
+global.toggle_light = false
+
 if(variable_global_exists("toggle_light")) {
 	if(!global.toggle_light)
 		instance_destroy(obj_light_renderer)

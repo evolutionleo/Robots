@@ -25,7 +25,10 @@ else if(type == "options") {
 	draw_text(x,y,"Options")
 }
 else if(type == "editor") {
-	draw_text(x,y,"Editor (beta)")
+	if(active)
+		draw_text(x,y,"Editor (beta)")
+	else
+		draw_text(x,y,"Editor (full only)")
 }
 else if(type == "leaderboard") {
 	draw_text(x,y,"Leaderboards")
